@@ -4,7 +4,7 @@ build:
             - pip3 install pylint
         override: 
             -
-                command: 'pylint  ./  --output-format=parseable --reports=n --include-naming-hint=y > pylint_result.json'
+                command: 'pylint  .  --output-format=parseable --reports=n --include-naming-hint=y > pylint_result.json'
                 analysis:
                     file: 'pylint_result.json'
                     format: 'pylint-parseable'
