@@ -1,8 +1,11 @@
 tools:
     pylint: true
     
-filter:
-    paths: 
-        - ./botcore.py
-    excluded_paths:
-        - ./*
+build:
+    tests:
+        override:
+        -
+            command: 'pylint  ./libs  --output-format=parseable  --reports=n --include-naming-hint=y | tee pylint-data'
+            analysis:
+                file: 'pylint-data'
+                format: 'pylint-parseable'
