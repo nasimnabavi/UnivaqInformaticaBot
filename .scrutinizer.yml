@@ -4,8 +4,8 @@ tools:
 build:
     tests:
         override:
-        -
-            command: 'pylint  ./libs  --output-format=parseable  --reports=n --include-naming-hint=y | tee pylint-data'
-            analysis:
-                file: 'pylint-data'
-                format: 'pylint-parseable'
+            -
+                command: 'pylint  ./libs  --output-format=parseable  --reports=n --include-naming-hint=y | tee pylint-data'
+                analysis:
+                    file: 'pylint-data'
+                    format: 'pylint-parseable'
