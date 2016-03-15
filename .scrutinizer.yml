@@ -1,10 +1,2 @@
-build:
-    tests:
-        before:
-            - pip3 install pylint
-        override: 
-            -
-                command: 'pylint  ./cron  --output-format=parseable --reports=n --include-naming-hint=y > pylint_result.json'
-                analysis:
-                    file: 'pylint_result.json'
-                    format: 'pylint-parseable'
+tools:
+    pylint: true
