@@ -13,5 +13,7 @@ build:
                     format: 'pylint-parseable'
 
 filter:
-    paths: ./botcore.py
-    excluded_paths: ./*
+    paths: 
+        - ./botcore.py
+    excluded_paths:
+        - ./*
