@@ -1,8 +1,12 @@
 tools:
-    pylint: true
+    pylint:
+        python_version: 3    
+        config_file: '.pylintrc'
     
 build:
     tests:
+        before:
+            - pip3 install pylint
         override:
             -
                 command: 'pylint  ./libs  --output-format=parseable  --reports=n --include-naming-hint=y | tee pylint-data'
