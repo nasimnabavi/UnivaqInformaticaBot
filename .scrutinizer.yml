@@ -1,4 +1,10 @@
-tools:
-    pylint:
-        python_version: 3     # Possible values: 2, 3
-        config_file: '.pylintrc'
+build:
+    tests:
+        before:
+            - pip3 install pylint
+        override: 
+            -
+                command: 'pylint  ./libs  --output-format=parseable --reports=n --include-naming-hint=y > pylint_result.json'
+                analysis:
+                    file: 'pylint_result.json'
+                    format: 'pylint-parseable'
