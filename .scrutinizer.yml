@@ -1,10 +1,17 @@
+tools:
+    pylint: true
+
 build:
     tests:
         before:
             - pip3 install pylint
         override: 
             -
-                command: 'pylint  ./libs  --output-format=parseable  --reports=n --include-naming-hint=y | tee pylint_result.json'
+                command: 'pylint  ./botcore.py --output-format=parseable  --reports=n --include-naming-hint=y | tee pylint-data'
                 analysis:
-                    file: 'pylint_result.json'
+                    file: 'pylint-data'
                     format: 'pylint-parseable'
+
+filter:
+    paths: ./botcore.py
+    excluded_paths: ./*
