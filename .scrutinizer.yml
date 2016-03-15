@@ -1,5 +1,7 @@
 build:
     tests:
+        before:
+            - sudo apt-get install pylint
         override: 
             -
                 command: 'pylint  --output-format=PylintOutputFormatter.ScrutinizerOutputFormatter --reports=n --include-naming-hint=y  --disable=all'
