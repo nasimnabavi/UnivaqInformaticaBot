@@ -1,0 +1,8 @@
+build:
+    tests:
+        override: 
+            -
+                command: 'python3  --output-format=PylintOutputFormatter.ScrutinizerOutputFormatter --reports=n --include-naming-hint=y  --disable=all'
+                analysis:
+                    file: 'pylint_result.json'
+                    format: 'pylint-json'
