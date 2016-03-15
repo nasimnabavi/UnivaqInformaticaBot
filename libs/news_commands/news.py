@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 from libs.utils import utils
 
 def news_command(bot, update, args):
+    global JOB_QUEUE
     """Defining the `news` command"""
 
     if len(args) and int(args[0]) <= 10:
